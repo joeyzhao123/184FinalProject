@@ -19,6 +19,8 @@ void main() {
 	id = mc_Entity.x;
 	normal = gl_NormalMatrix * gl_Normal;
 	offset = 0.1 * sin(gl_Position.x * 2);
-	gl_Position.y +=  0.1 * sin(gl_Position.x * 2 + float(worldTime*0.2));
-	gl_Position.x +=  0.1 * cos(gl_Position.z * 2 + float(worldTime*0.2));
+	if (id == 11111) {
+		gl_Position.y +=  0.1 * sin(gl_Position.x * 2 + float(worldTime*0.2));
+		gl_Position.x +=  0.1 * cos(gl_Position.z * 2 + float(worldTime*0.2));
+	}
 }
